@@ -1,0 +1,9 @@
+<div class="contents row" >
+  <p class="date">
+    <%= "✧ฅ(^･ω･^ฅ ) 今日は#{@day}、#{@week}だにゃん　(*ฅ^･ω･^)ฅ"%>
+  </p>
+  <% @tweets.each do |tweet| %>
+    <%= render partial: "tweet", locals: { tweet: tweet } %>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
